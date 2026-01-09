@@ -1,0 +1,83 @@
+name: Compatibility issue
+description: Conflicts with other mods, shaders, loaders, or versions
+title: "[Compat]: "
+labels: ["compatibility"]
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which FernlitCraft project?
+      options:
+        - Better Campfires: 3D Logs + Cozy Crackle
+        - Better Thunderstorms: Immersive Weather Sounds
+    validations:
+      required: true
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft version
+      placeholder: "e.g., 1.21.10"
+    validations:
+      required: true
+
+  - type: input
+    id: loader
+    attributes:
+      label: Mod loader + version
+      placeholder: "e.g., Fabric Loader 0.xx / Quilt / NeoForge"
+    validations:
+      required: true
+
+  - type: input
+    id: project_version
+    attributes:
+      label: FernlitCraft project version
+      placeholder: "e.g., v1.2.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: conflicting_mods
+    attributes:
+      label: What do you think it conflicts with?
+      description: Name the mod(s)/shader(s)/pack(s) you suspect, if any.
+      placeholder: "e.g., AmbientSounds, Iris + Complementary Unbound, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happens?
+      description: Describe the issue clearly (missing sounds, wrong mix, visuals broken, etc.).
+    validations:
+      required: true
+
+  - type: textarea
+    id: clean_test
+    attributes:
+      label: Does it happen in a clean test?
+      description: |
+        Please answer:
+        - Yes, it happens with only FernlitCraft + dependencies
+        - No, only happens in a modpack
+        - Haven't tested
+    validations:
+      required: true
+
+  - type: textarea
+    id: mod_list
+    attributes:
+      label: Full mod list + shader/resource packs
+      description: Paste your mod list (or attach/export). Include shader + other resource packs if relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (highly recommended)
+      description: Paste or link `logs/latest.log` from a session where the issue happened.
+    validations:
+      required: false
