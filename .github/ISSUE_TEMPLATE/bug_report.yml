@@ -1,0 +1,83 @@
+name: Bug report
+description: Something isn’t working as expected (no crash)
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which FernlitCraft project?
+      options:
+        - Better Campfires: 3D Logs + Cozy Crackle
+        - Better Thunderstorms: Immersive Weather Sounds
+    validations:
+      required: true
+
+  - type: input
+    id: mc_version
+    attributes:
+      label: Minecraft version
+      placeholder: "e.g., 1.21.10"
+    validations:
+      required: true
+
+  - type: input
+    id: loader
+    attributes:
+      label: Mod loader + version
+      placeholder: "e.g., Fabric Loader 0.xx / Quilt / NeoForge"
+    validations:
+      required: true
+
+  - type: input
+    id: project_version
+    attributes:
+      label: FernlitCraft project version
+      placeholder: "e.g., v1.2.0 (from Modrinth file name)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened (include screenshots/videos if helpful).
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1) ...
+        2) ...
+        3) ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Mods/shaders/resource packs installed
+      description: Paste your mod list (or attach/export). Include shader + other resource packs if relevant.
+      placeholder: "List mods here (or say 'clean test' if only FernlitCraft + dependencies)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (recommended)
+      description: Paste relevant parts of `logs/latest.log` or link to a paste site. Remove personal info if needed.
+      placeholder: "Paste log snippets or link here."
+    validations:
+      required: false
