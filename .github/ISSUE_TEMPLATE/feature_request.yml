@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest an improvement or new idea
+title: "[Feature]: "
+labels: ["feature request"]
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which FernlitCraft project?
+      options:
+        - Better Campfires: 3D Logs + Cozy Crackle
+        - Better Thunderstorms: Immersive Weather Sounds
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: What do you want to see added/changed?
+      placeholder: "Describe the feature as clearly as you can."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this useful?
+      placeholder: "What problem does it solve or what experience does it improve?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Extra context / references
+      description: Screenshots, links, examples from other mods, etc.
+    validations:
+      required: false
