@@ -1,0 +1,30 @@
+name: "READ THIS FIRST"
+description: "How to report bugs so I can fix them fast."
+title: "READ THIS FIRST: How to report bugs (versions + logs)"
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Read this before submitting an issue (FernlitCraft)
+
+        To fix a problem, I need enough info to reproduce it.
+
+        ### Include this in every report
+        - **Project:** Better Campfires OR Better Thunderstorms
+        - **Minecraft version:** (e.g., 1.21.10)
+        - **Loader + version:** (Fabric / Quilt / NeoForge)
+        - **FernlitCraft version:** (the Modrinth file version)
+        - **Expected** vs **Actual**
+        - **Steps to reproduce** (numbered)
+
+        ### If it's a crash (required)
+        Attach/paste:
+        - `crash-reports/<crash>.txt`
+        - `logs/latest.log`
+
+        ### If it's compatibility
+        - Full mod list (export from launcher)
+        - Shader pack + other resource packs enabled
+
+        Issues missing versions/logs may be labeled **needs info** until updated. Thank you 💛
